@@ -14,6 +14,7 @@ def get_crazy_functions():
     from crazy_functions.解析项目源代码 import 解析一个Rust项目
     from crazy_functions.解析项目源代码 import 解析一个Java项目
     from crazy_functions.解析项目源代码 import 解析一个前端项目
+    from crazy_functions.Python项目插入文档 import 解析Python项目
     from crazy_functions.高级功能函数模板 import 高阶功能模板函数
     from crazy_functions.Latex全文润色 import Latex英文润色
     from crazy_functions.询问多个大语言模型 import 同时问询
@@ -252,6 +253,13 @@ def get_crazy_functions():
             "AsButton": False,  # 加入下拉菜单中
             "Info": "对中文Latex项目全文进行润色处理 | 输入参数为路径或上传压缩包",
             "Function": HotReload(Latex中文润色),
+        },
+        "Python项目插入文档（输入路径或上传压缩包）": {
+            "Group": "编程",
+            "Color": "stop",
+            "AsButton": False,  # 加入下拉菜单中
+            "Info": "为Python项目插入文档 | 输入参数为项目/文件路径或上传压缩包",
+            "Function": HotReload(解析Python项目),
         },
         # 已经被新插件取代
         # "英文Latex项目全文纠错（输入路径或上传压缩包）": {
